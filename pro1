@@ -1,0 +1,22 @@
+int sensorpin =7;
+int ledpin =6;
+String ledstate = "off";
+void setup() {
+  // put your setup code here, to run once:
+pinMode(sensorpin,INPUT);
+pinMode(ledpin,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+int sensordata = digitalRead(sensorpin);
+if(sensordata ==1){
+  if(ledstate=="on"){
+    digitalWrite(ledpin,LOW);
+    ledstate = "off";
+  }else if(ledstate=="off"){
+    digitalWrite(ledpin,HIGH);
+    ledstate = "on";
+  }
+}
+}
