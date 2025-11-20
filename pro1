@@ -17,6 +17,7 @@ if(sensordata ==1){
   }else if(ledstate=="off"){
     digitalWrite(ledpin,HIGH);
     ledstate = "on";
+    delay(500);
   }
 }
 }
